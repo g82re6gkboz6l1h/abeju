@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import cn from "classnames";
-
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 const sans = Inter({
@@ -60,6 +60,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col">
           <div className="flex-1">{children}</div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
